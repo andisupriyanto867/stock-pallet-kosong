@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>STOCK PALLET KOSONG NDC</title>
+<meta name="theme-color" content="#1E8A8C">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Stock Pallet NDC">
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/vf5nikiz/image/upload/v1785164146/IMG_20260707_085722_slsyiz.jpg">
+<link rel="manifest" id="manifestLink" href="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF9F6;
+  --paper-2:#F2F0EA;
+  --panel:#FFFFFF;
+  --ink:#1E2430;
+  --ink-soft:#3C4454;
+  --muted:#78808F;
+  --muted-2:#A4ABB8;
+  --line:#E4E1D8;
+  --line-soft:#ECEAE2;
+
+  --wood:#B9863E;
+  --wood-2:#8F6529;
+  --teal:#1E8A8C;
+  --teal-2:#136568;
+  --violet:#7566C9;
+  --coral:#D1516A;
+  --plastic-dark:#7C8497;
+  --dc:#4E7FB0;
+
+  --jatake3:#1E8A8C;
+  --jatake6:#B9863E;
+  --poly:#7566C9;
+  --tele:#D1516A;
+
+  --radius:14px;
+}
+
+/* ===== 10 tema UI cerah (nama saja yang dipilih user, warna diterapkan otomatis) ===== */
+html[data-theme="kertas-hangat"]{ --paper:#FAF9F6; --paper-2:#F2F0EA; --line:#E4E1D8; --line-soft:#ECEAE2; --teal:#1E8A8C; --teal-2:#136568; --wood:#B9863E; --wood-2:#8F6529; --violet:#7566C9; --coral:#D1516A; --jatake3:#1E8A8C; --jatake6:#B9863E; --poly:#7566C9; --tele:#D1516A; }
+html[data-theme="biru-laut"]{ --paper:#F2F7FB; --paper-2:#E8F1F8; --line:#D9E6F0; --line-soft:#E4EEF5; --teal:#1E6FA8; --teal-2:#15517D; --wood:#C08A3E; --wood-2:#96692C; --violet:#6E63C4; --coral:#D45C74; --jatake3:#1E6FA8; --jatake6:#C08A3E; --poly:#6E63C4; --tele:#D45C74; }
+html[data-theme="mint-segar"]{ --paper:#F1FAF6; --paper-2:#E7F5EE; --line:#D7ECE1; --line-soft:#E2F1E9; --teal:#1FA97A; --teal-2:#157F5A; --wood:#B9863E; --wood-2:#8F6529; --violet:#7566C9; --coral:#D1516A; --jatake3:#1FA97A; --jatake6:#B9863E; --poly:#7566C9; --tele:#D1516A; }
+html[data-theme="lavender-lembut"]{ --paper:#F8F6FC; --paper-2:#F1EDF9; --line:#E4DDF2; --line-soft:#ECE6F6; --teal:#7566C9; --teal-2:#5C4FB0; --wood:#B9863E; --wood-2:#8F6529; --violet:#8266D6; --coral:#D1516A; --jatake3:#7566C9; --jatake6:#B9863E; --poly:#8266D6; --tele:#D1516A; }
+html[data-theme="pasir-gurun"]{ --paper:#FAF3E8; --paper-2:#F4E9D6; --line:#EAD9B8; --line-soft:#F0E1C3; --teal:#1E8A8C; --teal-2:#136568; --wood:#C08A3E; --wood-2:#9A6B2A; --violet:#7566C9; --coral:#D1516A; --jatake3:#1E8A8C; --jatake6:#C08A3E; --poly:#7566C9; --tele:#D1516A; }
+html[data-theme="koral-cerah"]{ --paper:#FDF3F1; --paper-2:#FBE7E3; --line:#F3D2CB; --line-soft:#F8DDD7; --teal:#1E8A8C; --teal-2:#136568; --wood:#B9863E; --wood-2:#8F6529; --violet:#7566C9; --coral:#E0576F; --jatake3:#1E8A8C; --jatake6:#B9863E; --poly:#7566C9; --tele:#E0576F; }
+html[data-theme="abu-modern"]{ --paper:#F5F5F7; --paper-2:#ECECEF; --line:#DCDCE2; --line-soft:#E6E6EA; --ink:#20232B; --teal:#3C6E93; --teal-2:#2C5471; --wood:#A5793B; --wood-2:#83602C; --violet:#6C63A6; --coral:#C45064; --jatake3:#3C6E93; --jatake6:#A5793B; --poly:#6C63A6; --tele:#C45064; }
+html[data-theme="hijau-zamrud"]{ --paper:#F0F9F4; --paper-2:#E3F3EA; --line:#D2E8DB; --line-soft:#DFEFE4; --teal:#12805A; --teal-2:#0C5E42; --wood:#B9863E; --wood-2:#8F6529; --violet:#7566C9; --coral:#D1516A; --jatake3:#12805A; --jatake6:#B9863E; --poly:#7566C9; --tele:#D1516A; }
+html[data-theme="kuning-madu"]{ --paper:#FFF9EC; --paper-2:#FBF0D6; --line:#F0DFAE; --line-soft:#F6E8C0; --teal:#1E8A8C; --teal-2:#136568; --wood:#D9A441; --wood-2:#AD7F2A; --violet:#7566C9; --coral:#D1516A; --jatake3:#1E8A8C; --jatake6:#D9A441; --poly:#7566C9; --tele:#D1516A; }
+html[data-theme="biru-langit"]{ --paper:#EFF7FC; --paper-2:#E1F0F9; --line:#CDE5F2; --line-soft:#DAEBF5; --teal:#2AA6D6; --teal-2:#1E7EA3; --wood:#B9863E; --wood-2:#8F6529; --violet:#7566C9; --coral:#D1516A; --jatake3:#2AA6D6; --jatake6:#B9863E; --poly:#7566C9; --tele:#D1516A; }
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.headline{font-family:'Fraunces',serif;}
+
+::-webkit-scrollbar{height:8px;width:8px;}
+::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px;}
+::-webkit-scrollbar-track{background:transparent;}
+
+/* ===== Header ===== */
+header.topbar{
+  position:sticky;top:0;z-index:40;
+  background:rgba(250,249,246,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  padding:18px 24px 0 24px;
+}
+.topbar-inner{
+  display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px;
+  max-width:1400px;margin:0 auto;padding-bottom:16px;
+}
+.brand{display:flex;align-items:center;gap:16px;}
+.brand-mark{
+  width:184px;height:46px;border-radius:6px;flex:none;
+  border:1px solid var(--line);background:var(--panel);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;padding:2px;
+}
+.brand-mark img{width:100%;height:100%;object-fit:contain;display:block;}
+.brand-text .eyebrow{font-size:11px;letter-spacing:.06em;color:var(--muted);margin:0 0 3px 0;font-weight:600;}
+.brand-text h1{font-size:21px;margin:0;font-weight:600;letter-spacing:.002em;line-height:1.15;color:var(--ink);}
+.brand-text h1 span{color:var(--teal);}
+.clock-box{text-align:right;}
+.clock-time{font-family:'Fraunces',serif;font-size:27px;font-weight:600;line-height:1;color:var(--ink);}
+.clock-date{font-size:12.5px;color:var(--muted);margin-top:5px;}
+
+.theme-picker{display:flex;align-items:center;gap:8px;max-width:1400px;margin:0 auto;padding-bottom:10px;flex-wrap:wrap;}
+.theme-picker label{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.02em;}
+.theme-picker select{
+  background:var(--paper-2);border:1px solid var(--line);color:var(--ink-soft);
+  border-radius:8px;padding:6px 10px;font-family:'Inter',sans-serif;font-size:12.5px;
+  outline:none;cursor:pointer;
+}
+.theme-picker select:focus{border-color:var(--teal);}
+.input-pallet-btn{
+  display:inline-flex;align-items:center;
+}
+.refresh-btn{
+  display:inline-flex;align-items:center;
+}
+.refresh-status{
+  font-size:11px;color:var(--muted-2);display:flex;align-items:center;gap:5px;
+}
+
+/* ===== status kolom angka: terisi (hijau) vs masih 0 (merah) ===== */
+.form-field input[type=number].val-zero-input{
+  border-color:#D1516A;background:#FDF1F2;color:#9C3348;font-weight:600;
+}
+.form-field input[type=number].val-filled-input{
+  border-color:#1E8A54;background:#EFFBF3;color:#1E7A4E;font-weight:600;
+}
+.btn-spin{
+  width:12px;height:12px;border-radius:50%;border:2px solid rgba(255,255,255,.5);
+  border-top-color:#fff;display:inline-block;vertical-align:-2px;margin-right:6px;
+  animation:spin .8s linear infinite;
+}
+.btn-spin.dark{border:2px solid var(--line);border-top-color:var(--teal-2);}
+.btn:disabled{opacity:.7;cursor:not-allowed;}
+.icon-spin{animation:spin .8s linear infinite;transform-origin:center;}
+
+nav.tabs{
+  max-width:1400px;margin:0 auto;display:flex;gap:4px;
+  border-top:1px solid var(--line-soft);
+}
+nav.tabs button{
+  appearance:none;border:none;background:transparent;color:var(--muted);
+  font-family:'Inter',sans-serif;font-weight:600;font-size:13.5px;
+  padding:13px 16px;cursor:pointer;border-bottom:2px solid transparent;
+  transition:color .15s ease, border-color .15s ease;
+  display:flex;align-items:center;gap:8px;
+}
+nav.tabs button svg{width:16px;height:16px;opacity:.75;}
+nav.tabs button:hover{color:var(--ink);}
+nav.tabs button.active{color:var(--ink);border-bottom-color:var(--teal);}
+
+main{max-width:1400px;margin:0 auto;padding:22px 24px 60px 24px;}
+.view{display:none;}
+.view.active{display:block;}
+
+/* ===== shared bits ===== */
+.panel{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+}
+.panel-title{
+  font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:var(--ink);
+  margin:0 0 2px 0;
+}
+.panel-sub{font-size:12px;color:var(--muted);margin:0;}
+.hint{font-size:12px;color:var(--muted-2);}
+
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;
+  padding:3px 10px;border-radius:100px;border:1px solid var(--line);color:var(--muted);
+  background:var(--paper-2);
+}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--teal);}
+
+/* ===== Filter bar ===== */
+.filterbar{
+  display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;
+  padding:16px 18px;margin-bottom:18px;
+}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field label{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.01em;}
+.field select, .field input[type=date]{
+  background:var(--paper-2);border:1px solid var(--line);color:var(--ink);
+  border-radius:9px;padding:9px 12px;font-family:'Inter',sans-serif;font-size:13.5px;
+  min-width:150px;outline:none;
+}
+.field select:focus, .field input:focus{border-color:var(--teal);}
+.btn{
+  background:var(--panel);border:1px solid var(--line);color:var(--ink-soft);
+  border-radius:9px;padding:9px 14px;font-size:13px;font-weight:600;cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+.btn:hover{border-color:var(--teal);color:var(--teal-2);}
+.btn.ghost{background:transparent;}
+.filterbar .spacer{flex:1;}
+
+/* ===== Dashboard grid ===== */
+.dash-grid{
+  display:grid;grid-template-columns: 1.4fr 1fr;gap:16px;margin-bottom:16px;
+}
+.stat-hero{padding:24px;display:flex;flex-direction:column;gap:14px;}
+.stat-hero-top{display:flex;justify-content:space-between;align-items:flex-start;}
+.stat-hero .num{font-family:'Fraunces',serif;font-size:42px;font-weight:600;line-height:1;color:var(--ink);}
+.stat-hero .num small{font-size:16px;color:var(--muted);font-weight:500;margin-left:6px;font-family:'Inter',sans-serif;}
+.stat-hero .lbl{font-size:12.5px;color:var(--muted);margin-top:6px;}
+.chart-wrap{height:150px;position:relative;}
+.chart-fallback{
+  height:150px;display:flex;align-items:center;justify-content:center;
+  color:var(--muted-2);font-size:12px;background:var(--paper-2);border-radius:10px;
+}
+
+.donut-panel{padding:24px;display:flex;flex-direction:column;gap:10px;}
+.donut-wrap{position:relative;height:170px;display:flex;align-items:center;justify-content:center;}
+.legend-list{display:flex;flex-direction:column;gap:7px;margin-top:6px;}
+.legend-row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);}
+.legend-row .sw{width:9px;height:9px;border-radius:2px;flex:none;}
+.legend-row .val{margin-left:auto;color:var(--ink);font-weight:600;font-family:'Fraunces',serif;}
+
+.cards-row{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px;
+}
+.gcard{
+  padding:17px 18px;border-radius:var(--radius);position:relative;overflow:hidden;
+  border:1px solid var(--line);background:var(--panel);
+}
+.gcard::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+}
+.gcard.jatake3::before{background:var(--jatake3);}
+.gcard.jatake6::before{background:var(--jatake6);}
+.gcard.poly::before{background:var(--poly);}
+.gcard.tele::before{background:var(--tele);}
+.gcard .gname{font-size:12px;font-weight:700;letter-spacing:.01em;color:var(--ink-soft);}
+.gcard .gtotal{font-family:'Fraunces',serif;font-size:27px;font-weight:600;margin-top:8px;color:var(--ink);}
+.gcard .gsub{font-size:11px;color:var(--muted);margin-top:4px;}
+
+.breakdown-panel{padding:22px;}
+.breakdown-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+table.breakdown{width:100%;border-collapse:collapse;font-size:13px;}
+table.breakdown th{
+  text-align:left;color:var(--muted);font-weight:600;font-size:11px;
+  padding:8px 10px;border-bottom:1px solid var(--line-soft);
+}
+table.breakdown td{padding:11px 10px;border-bottom:1px solid var(--line-soft);}
+table.breakdown tr:last-child td{border-bottom:none;}
+table.breakdown td.type{display:flex;align-items:center;gap:9px;font-weight:500;color:var(--ink-soft);}
+table.breakdown .sw{width:9px;height:9px;border-radius:2px;flex:none;}
+table.breakdown td.num{text-align:right;font-family:'Fraunces',serif;font-weight:600;color:var(--ink);}
+table.breakdown td.bar-cell{width:34%;}
+.bar-track{height:7px;background:var(--paper-2);border-radius:6px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:6px;}
+
+/* ===== raw tables ===== */
+.table-wrap{overflow:auto;border-radius:var(--radius);border:1px solid var(--line);background:var(--panel);}
+table.raw{width:100%;border-collapse:collapse;font-size:12.5px;white-space:nowrap;}
+table.raw thead th{
+  position:sticky;top:0;background:var(--paper-2);color:var(--muted);
+  text-align:left;font-weight:600;font-size:11px;padding:11px 12px;border-bottom:1px solid var(--line);
+  z-index:2;
+}
+table.raw tbody td{padding:10px 12px;border-bottom:1px solid var(--line-soft);color:var(--ink-soft);}
+table.raw tbody tr:hover{background:var(--paper-2);}
+table.raw td.val-zero{color:#C0293F;font-weight:700;}
+table.raw td.val-pos{color:#1E8A54;font-weight:700;}
+.tag{padding:2px 9px;border-radius:100px;font-size:11px;font-weight:600;}
+.tag.j3{background:rgba(30,138,140,.12);color:var(--jatake3);}
+.tag.j6{background:rgba(185,134,62,.14);color:var(--wood-2);}
+.tag.poly{background:rgba(117,102,201,.12);color:var(--poly);}
+.tag.tele{background:rgba(209,81,106,.12);color:var(--tele);}
+.tag.s{background:var(--paper-2);color:var(--muted);}
+
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap;}
+.search-input{
+  background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:9px;
+  padding:9px 12px;font-size:13px;min-width:220px;font-family:'Inter',sans-serif;outline:none;
+}
+.search-input:focus{border-color:var(--teal);}
+.count-chip{font-size:12px;color:var(--muted);}
+
+/* ===== menu3 raw O-Y blocks ===== */
+.oy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.oy-block{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--panel);}
+.oy-head{padding:13px 14px;display:flex;justify-content:space-between;align-items:center;font-family:'Fraunces',serif;font-weight:600;font-size:14.5px;color:#fff;}
+.oy-head.j3{background:linear-gradient(135deg,var(--jatake3),var(--teal-2));}
+.oy-head.j6{background:linear-gradient(135deg,var(--jatake6),var(--wood-2));}
+.oy-head.poly{background:linear-gradient(135deg,var(--poly),#5C4FB0);}
+.oy-head.tele{background:linear-gradient(135deg,var(--tele),#B33955);}
+.oy-shift-label{font-size:11px;font-weight:700;letter-spacing:.03em;padding:7px 14px;}
+.oy-shift-label.shift-1{background:rgba(30,138,140,.13);color:var(--teal-2);}
+.oy-shift-label.shift-2{background:rgba(185,134,62,.15);color:var(--wood-2);}
+.oy-shift-label.shift-3{background:rgba(117,102,201,.13);color:#5C4FB0;}
+.oy-shift-label.shift-x{background:var(--paper-2);color:var(--muted);}
+.oy-body{padding:4px 0 8px 0;}
+.oy-row{display:flex;justify-content:space-between;padding:7px 14px;font-size:12.5px;}
+.oy-row .l{color:var(--muted);}
+.oy-row .v{font-weight:600;font-family:'Fraunces',serif;color:var(--ink);}
+
+.loading{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px;padding:30px;justify-content:center;}
+.spin{width:16px;height:16px;border-radius:50%;border:2px solid var(--line);border-top-color:var(--teal);animation:spin .8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.error-box{
+  background:#FBEEF0;border:1px solid #EFC3CB;color:#9C3348;
+  padding:14px 16px;border-radius:10px;font-size:13px;line-height:1.5;
+}
+
+/* ===== offline banner ===== */
+.offline-banner{
+  background:#FFF4D6;color:#8F6529;border-bottom:1px solid #F0DFAE;
+  padding:9px 16px;font-size:12.5px;text-align:center;font-weight:600;
+  display:none;align-items:center;justify-content:center;gap:8px;
+}
+.offline-banner .dot-warn{width:7px;height:7px;border-radius:50%;background:#D9A441;flex:none;}
+
+/* ===== install app button ===== */
+.install-btn{
+  display:none;align-items:center;gap:6px;
+  background:var(--teal);border:1px solid var(--teal-2);color:#fff;
+  border-radius:9px;padding:9px 14px;font-size:12.5px;font-weight:600;cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+.install-btn:hover{background:var(--teal-2);}
+
+/* ===== period toggle (harian/mingguan/bulanan) ===== */
+.period-toggle{display:flex;gap:3px;background:var(--paper-2);border:1px solid var(--line);border-radius:9px;padding:3px;}
+.period-toggle button{
+  appearance:none;border:none;background:transparent;color:var(--muted);
+  font-family:'Inter',sans-serif;font-weight:600;font-size:11.5px;
+  padding:6px 10px;border-radius:7px;cursor:pointer;
+}
+.period-toggle button.active{background:var(--panel);color:var(--teal-2);box-shadow:0 1px 2px rgba(0,0,0,.06);}
+
+/* ===== shift comparison panel ===== */
+.shift-compare-panel{padding:22px;margin-bottom:16px;}
+.shift-compare-body{display:flex;flex-direction:column;gap:12px;margin-top:6px;}
+.shift-bar-row{display:flex;align-items:center;gap:12px;}
+.shift-bar-label{width:132px;flex:none;font-size:12.5px;font-weight:600;color:var(--ink-soft);display:flex;align-items:center;gap:8px;}
+.shift-bar-label .sw{width:9px;height:9px;border-radius:2px;flex:none;}
+.shift-bar-track{flex:1;height:16px;background:var(--paper-2);border-radius:8px;overflow:hidden;}
+.shift-bar-fill{height:100%;border-radius:8px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;}
+.shift-bar-val{width:118px;flex:none;text-align:right;font-family:'Fraunces',serif;font-weight:600;font-size:13.5px;color:var(--ink);}
+.shift-bar-val small{font-family:'Inter',sans-serif;color:var(--muted);font-weight:500;font-size:11px;}
+.shift-compare-empty{font-size:12.5px;color:var(--muted);padding:10px 2px;}
+.shift-peak-note{
+  margin-top:4px;font-size:12px;color:var(--teal-2);background:rgba(30,138,140,.08);
+  border-radius:9px;padding:9px 12px;display:flex;align-items:center;gap:8px;
+}
+
+/* ===== export / print buttons ===== */
+.btn.accent{background:var(--teal);border-color:var(--teal-2);color:#fff;}
+.btn.accent:hover{background:var(--teal-2);color:#fff;}
+
+/* ===== toast notifikasi ===== */
+.toast-stack{
+  position:fixed;top:16px;right:16px;z-index:200;
+  display:flex;flex-direction:column;gap:10px;
+  max-width:340px;width:calc(100% - 32px);
+  pointer-events:none;
+}
+.toast{
+  display:flex;align-items:flex-start;gap:10px;
+  background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--teal);
+  border-radius:10px;padding:12px 14px;
+  box-shadow:0 10px 28px rgba(30,36,48,.16);
+  font-family:'Inter',sans-serif;font-size:12.5px;color:var(--ink-soft);
+  animation:toastIn .25s ease;
+  pointer-events:auto;
+}
+.toast.success{border-left-color:#1E8A54;}
+.toast.error{border-left-color:#C0293F;}
+.toast .toast-icon{flex:none;width:18px;height:18px;margin-top:1px;}
+.toast .toast-body{flex:1;}
+.toast .toast-title{font-weight:700;color:var(--ink);margin-bottom:2px;font-size:13px;}
+.toast .toast-close{
+  flex:none;background:transparent;border:none;color:var(--muted);cursor:pointer;
+  font-size:16px;line-height:1;padding:0 2px;
+}
+.toast.hide{animation:toastOut .2s ease forwards;}
+@keyframes toastIn{from{opacity:0;transform:translateX(18px);}to{opacity:1;transform:translateX(0);}}
+@keyframes toastOut{from{opacity:1;transform:translateX(0);}to{opacity:0;transform:translateX(18px);}}
+@media (max-width:640px){
+  .toast-stack{left:12px;right:12px;top:12px;max-width:none;width:auto;}
+}
+
+/* ===== print-only ringkasan ===== */
+.print-only{display:none;}
+@media print{
+  body *{visibility:hidden;}
+  .print-only, .print-only *{visibility:visible;}
+  .print-only{
+    display:block;position:absolute;left:0;top:0;width:100%;padding:16px;
+    font-family:'Inter',sans-serif;color:#1E2430;
+  }
+  .print-only h2{font-family:'Fraunces',serif;font-size:19px;margin:0 0 2px 0;}
+  .print-only .p-meta{font-size:11.5px;color:#555;margin-bottom:14px;}
+  .print-only .p-total{font-family:'Fraunces',serif;font-size:30px;font-weight:600;margin:6px 0 14px 0;}
+  .print-only table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:14px;}
+  .print-only th,.print-only td{text-align:left;padding:6px 8px;border-bottom:1px solid #ddd;}
+  .print-only .p-cards{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
+  .print-only .p-card{border:1px solid #ccc;border-radius:8px;padding:8px 12px;font-size:12px;min-width:120px;}
+  .print-only .p-card b{display:block;font-family:'Fraunces',serif;font-size:18px;margin-top:3px;}
+  .print-only .p-foot{font-size:10.5px;color:#777;margin-top:10px;}
+}
+
+/* ===== modal (tambah/edit entri, pengaturan) ===== */
+.modal-overlay{
+  display:none;position:fixed;inset:0;z-index:100;background:rgba(30,36,48,.45);
+  align-items:center;justify-content:center;padding:16px;
+}
+.modal-overlay.open{display:flex;}
+.modal-panel{
+  background:var(--panel);border-radius:16px;border:1px solid var(--line);
+  width:100%;max-width:560px;max-height:90vh;overflow:auto;
+  padding:22px;
+}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;}
+.modal-close{
+  background:transparent;border:none;color:var(--muted);font-size:20px;cursor:pointer;
+  line-height:1;padding:2px 6px;
+}
+.modal-close:hover{color:var(--ink);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.form-grid .full{grid-column:1 / -1;}
+.form-field{display:flex;flex-direction:column;gap:6px;}
+.form-field label{font-size:11.5px;color:var(--muted);font-weight:600;}
+.form-field input, .form-field select{
+  background:var(--paper-2);border:1px solid var(--line);color:var(--ink);
+  border-radius:9px;padding:9px 12px;font-family:'Inter',sans-serif;font-size:13.5px;outline:none;
+}
+.form-field input:focus, .form-field select:focus{border-color:var(--teal);}
+.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px;}
+.modal-msg{font-size:12.5px;padding:9px 12px;border-radius:9px;margin-bottom:12px;display:none;}
+.modal-msg.err{background:#FBEEF0;color:#9C3348;display:block;}
+.modal-msg.ok{background:#E6F5EC;color:#1E7A4E;display:block;}
+.modal-msg.info{background:var(--paper-2);color:var(--muted);display:block;}
+td.aksi-cell{display:flex;gap:6px;}
+.mini-btn{
+  background:var(--paper-2);border:1px solid var(--line);color:var(--ink-soft);
+  border-radius:7px;padding:5px 10px;font-size:11.5px;font-weight:600;cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+.mini-btn:hover{border-color:var(--teal);color:var(--teal-2);}
+.mini-btn.danger:hover{border-color:#C0293F;color:#C0293F;}
+
+/* ===== responsive ===== */
+@media (max-width:980px){
+  .dash-grid{grid-template-columns:1fr;}
+  .cards-row{grid-template-columns:repeat(2,1fr);}
+  .oy-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:640px){
+  header.topbar{padding:14px 14px 0 14px;}
+  .clock-time{font-size:21px;}
+  .brand-text h1{font-size:16px;}
+  .brand-mark{width:128px;height:32px;}
+  nav.tabs{overflow-x:auto;}
+  nav.tabs button{padding:11px 12px;font-size:12.5px;white-space:nowrap;}
+  main{padding:14px 14px 40px 14px;}
+  .cards-row{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .oy-grid{grid-template-columns:1fr;}
+  .stat-hero .num{font-size:32px;}
+  .filterbar{padding:14px;}
+  .field select,.field input[type=date]{min-width:130px;}
+}
+</style>
+</head>
+<body>
+
+<div class="toast-stack" id="toastStack"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-mark"><img src="https://res.cloudinary.com/vf5nikiz/image/upload/v1785164146/IMG_20260707_085722_slsyiz.jpg" alt="Logo NDC Jatake"></div>
+      <div class="brand-text">
+        <p class="eyebrow">NDC JATAKE &middot; PARAGONCORP</p>
+        <h1>STOCK PALLET <span>KOSONG</span> NDC</h1>
+      </div>
+    </div>
+    <div class="clock-box">
+      <div class="clock-time" id="clockTime">--:--:--</div>
+      <div class="clock-date" id="clockDate">memuat tanggal...</div>
+    </div>
+  </div>
+  <div class="theme-picker">
+    <label for="themeSelect">Tema</label>
+    <select id="themeSelect">
+      <option value="kertas-hangat">Kertas Hangat</option>
+      <option value="biru-laut">Biru Laut</option>
+      <option value="mint-segar">Mint Segar</option>
+      <option value="lavender-lembut">Lavender Lembut</option>
+      <option value="pasir-gurun">Pasir Gurun</option>
+      <option value="koral-cerah">Koral Cerah</option>
+      <option value="abu-modern">Abu Modern</option>
+      <option value="hijau-zamrud">Hijau Zamrud</option>
+      <option value="kuning-madu">Kuning Madu</option>
+      <option value="biru-langit">Biru Langit</option>
+    </select>
+    <button class="btn refresh-btn" id="manualRefreshBtn" type="button" title="Muat ulang semua data sekarang">
+      <svg id="manualRefreshIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;vertical-align:-2px;margin-right:5px;"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+      Refresh
+    </button>
+    <button class="btn accent input-pallet-btn" id="gotoInputPallet" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;vertical-align:-2px;margin-right:5px;"><path d="M12 5v14M5 12h14"/></svg>
+      Input Pallet
+    </button>
+    <span class="refresh-status" id="refreshStatus"></span>
+  </div>
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="menu1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>
+      Data Log (A&ndash;L)
+    </button>
+    <button class="tab-btn" data-tab="menu2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg>
+      Dasbor
+    </button>
+    <button class="tab-btn" data-tab="menu3">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      Ringkasan (O&ndash;Y)
+    </button>
+  </nav>
+</header>
+
+<div class="offline-banner" id="offlineBanner"><span class="dot-warn"></span><span id="offlineBannerText"></span></div>
+
+<main>
+
+  <!-- ===================== MENU 4 : INPUT PALLET (tambah data baru) ===================== -->
+  <section class="view" id="view-menu4">
+    <div class="panel" style="padding:22px;max-width:640px;margin:0 auto;">
+      <p class="panel-title">Input Pallet Kosong</p>
+      <p class="panel-sub" style="margin-bottom:16px;">Isi form ini untuk menambah data baru ke spreadsheet. Data langsung terbaca di tab Data Log, Dasbor, dan Ringkasan setelah tersimpan.</p>
+      <div class="modal-msg" id="ipMsg"></div>
+      <div class="form-grid">
+        <div class="form-field">
+          <label>Gudang</label>
+          <select id="ipGudang">
+            <option value="JATAKE 3">Jatake 3</option>
+            <option value="JATAKE 6">Jatake 6</option>
+            <option value="POLY UNGGUL">Poly Unggul</option>
+            <option value="TELESONIK">Telesonik</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Shift</label>
+          <select id="ipShift">
+            <option value="Shift 1">Shift 1</option>
+            <option value="Shift 2">Shift 2</option>
+            <option value="Shift 3">Shift 3</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Zona</label>
+          <select id="ipZona">
+            <option value="Inbound">Inbound</option>
+            <option value="Picker">Picker</option>
+            <option value="Packer">Packer</option>
+            <option value="Loading">Loading</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Tanggal Shift Masuk</label>
+          <input type="date" id="ipTanggal">
+        </div>
+        <div class="form-field">
+          <label>Kayu PTI/JPS</label>
+          <input type="number" id="ipKayuPti" min="0" value="0">
+        </div>
+        <div class="form-field">
+          <label>Plastik Grey</label>
+          <input type="number" id="ipPlastikGrey" min="0" value="0">
+        </div>
+        <div class="form-field">
+          <label>Plastik Hitam Tebal</label>
+          <input type="number" id="ipPlastikTebal" min="0" value="0">
+        </div>
+        <div class="form-field">
+          <label>Plastik Hitam One Way</label>
+          <input type="number" id="ipPlastikOneWay" min="0" value="0">
+        </div>
+        <div class="form-field">
+          <label>Kayu Loscam</label>
+          <input type="number" id="ipKayuLoscam" min="0" value="0">
+        </div>
+        <div class="form-field">
+          <label>Dedicated DC</label>
+          <input type="number" id="ipDedicatedDC" min="0" value="0">
+        </div>
+        <div class="form-field full">
+          <label>Pallet Tidak Standar</label>
+          <input type="number" id="ipPalletTidakStandar" min="0" value="0">
+        </div>
+      </div>
+      <div class="modal-actions" style="justify-content:flex-start;">
+        <button class="btn ghost" id="ipReset">Bersihkan Form</button>
+        <button class="btn accent" id="ipSave">Simpan Data</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MENU 1 : DATA LOG A-L ===================== -->
+  <section class="view active" id="view-menu1">
+    <div class="toolbar">
+      <input type="text" class="search-input" id="m1Search" placeholder="Cari gudang, shift, zona...">
+      <span class="count-chip" id="m1Count">0 baris</span>
+      <div class="spacer"></div>
+      <button class="install-btn" id="installBtn">Install Aplikasi</button>
+      <button class="btn accent" id="m1Export">Export CSV</button>
+      <button class="btn ghost" id="m1Refresh">Muat ulang</button>
+    </div>
+    <div id="m1LoadArea" class="loading"><div class="spin"></div>Mengambil data dari spreadsheet...</div>
+    <div class="table-wrap" id="m1TableWrap" style="display:none;">
+      <table class="raw">
+        <thead>
+          <tr>
+            <th>Timestamp</th><th>Gudang</th><th>Shift</th><th>Zona</th>
+            <th>Kayu PTI/JPS</th><th>Plastik Grey</th><th>Plastik Hitam Tebal</th>
+            <th>Plastik Hitam One Way</th><th>Kayu Loscam</th><th>Dedicated DC</th>
+            <th>Pallet Tidak Standar</th><th>Tanggal Shift Masuk</th><th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="m1Body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===================== MENU 2 : DASHBOARD ===================== -->
+  <section class="view" id="view-menu2">
+    <div class="panel filterbar">
+      <div class="field">
+        <label>Tanggal (Tanggal Shift Masuk)</label>
+        <select id="fDate"><option value="">Semua tanggal</option></select>
+      </div>
+      <div class="field">
+        <label>Gudang</label>
+        <select id="fGudang">
+          <option value="">Semua Gudang</option>
+          <option value="JATAKE 3">Jatake 3</option>
+          <option value="JATAKE 6">Jatake 6</option>
+          <option value="POLY UNGGUL">Poly Unggul</option>
+          <option value="TELESONIK">Telesonik</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Shift</label>
+        <select id="fShift">
+          <option value="">Semua Shift</option>
+          <option value="Shift 1">Shift 1</option>
+          <option value="Shift 2">Shift 2</option>
+          <option value="Shift 3">Shift 3</option>
+        </select>
+      </div>
+      <div class="spacer"></div>
+      <button class="btn accent" id="m2Print">Cetak Ringkas</button>
+      <button class="btn ghost" id="m2Reset">Reset filter</button>
+    </div>
+
+    <div id="m2LoadArea" class="loading"><div class="spin"></div>Menghitung ringkasan...</div>
+
+    <div id="m2Content" style="display:none;">
+      <div class="dash-grid">
+        <div class="panel stat-hero">
+          <div class="stat-hero-top">
+            <div>
+              <div class="badge"><span class="dot"></span>Total sesuai filter</div>
+            </div>
+            <span class="hint" id="m2EntriHint">0 entri</span>
+          </div>
+          <div>
+            <div class="num" id="heroTotal">0 <small>pallet</small></div>
+            <div class="lbl">Total seluruh jenis pallet kosong pada rentang filter yang dipilih</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="hint">Tren</span>
+            <div class="period-toggle" id="periodToggle">
+              <button data-period="harian" class="active">Harian</button>
+              <button data-period="mingguan">Mingguan</button>
+              <button data-period="bulanan">Bulanan</button>
+            </div>
+          </div>
+          <div class="chart-wrap" id="trendWrap"><canvas id="trendChart"></canvas></div>
+        </div>
+        <div class="panel donut-panel">
+          <p class="panel-title">Komposisi Jenis Pallet</p>
+          <p class="panel-sub">Persentase dari total pallet terfilter</p>
+          <div class="donut-wrap" id="donutWrap"><canvas id="donutChart"></canvas></div>
+          <div class="legend-list" id="donutLegend"></div>
+        </div>
+      </div>
+
+      <div class="cards-row" id="gudangCards"></div>
+
+      <div class="panel shift-compare-panel">
+        <div class="breakdown-head">
+          <div>
+            <p class="panel-title">Perbandingan Shift</p>
+            <p class="panel-sub">Total pallet per shift dalam satu gudang &mdash; membantu melihat pola jam sibuk</p>
+          </div>
+          <div class="field" style="margin:0;">
+            <label>Gudang</label>
+            <select id="shiftCompareGudang">
+              <option value="JATAKE 3">Jatake 3</option>
+              <option value="JATAKE 6">Jatake 6</option>
+              <option value="POLY UNGGUL">Poly Unggul</option>
+              <option value="TELESONIK">Telesonik</option>
+            </select>
+          </div>
+        </div>
+        <div class="shift-compare-body" id="shiftCompareBody"></div>
+      </div>
+
+      <div class="panel breakdown-panel">
+        <div class="breakdown-head">
+          <div>
+            <p class="panel-title">Rincian Jenis Pallet &amp; Jumlah</p>
+            <p class="panel-sub">Mengikuti filter tanggal / gudang / shift di atas</p>
+          </div>
+        </div>
+        <table class="breakdown">
+          <thead><tr><th>Jenis Pallet</th><th style="width:40%">Proporsi</th><th style="text-align:right">Jumlah</th></tr></thead>
+          <tbody id="breakdownBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MENU 3 : DATA ASLI O-Y ===================== -->
+  <section class="view" id="view-menu3">
+    <div class="toolbar">
+      <span class="count-chip">Tampilan asli sesuai kolom O&ndash;Y pada spreadsheet, per Shift per Gudang</span>
+      <div class="spacer"></div>
+      <button class="btn ghost" id="m3Refresh">Muat ulang</button>
+    </div>
+    <div id="m3LoadArea" class="loading"><div class="spin"></div>Mengambil ringkasan O&ndash;Y...</div>
+    <div class="oy-grid" id="oyGrid" style="display:none;"></div>
+  </section>
+
+</main>
+
+<div class="print-only" id="printArea"></div>
+
+<!-- ===================== MODAL: TAMBAH / EDIT ENTRI ===================== -->
+<div class="modal-overlay" id="entryModalOverlay">
+  <div class="modal-panel">
+    <div class="modal-head">
+      <p class="panel-title" id="entryModalTitle">Tambah Entri</p>
+      <button class="modal-close" id="entryModalClose">&times;</button>
+    </div>
+    <div class="modal-msg" id="entryModalMsg"></div>
+    <div class="form-grid">
+      <div class="form-field">
+        <label>Gudang</label>
+        <select id="fldGudang">
+          <option value="JATAKE 3">Jatake 3</option>
+          <option value="JATAKE 6">Jatake 6</option>
+          <option value="POLY UNGGUL">Poly Unggul</option>
+          <option value="TELESONIK">Telesonik</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Shift</label>
+        <select id="fldShift">
+          <option value="Shift 1">Shift 1</option>
+          <option value="Shift 2">Shift 2</option>
+          <option value="Shift 3">Shift 3</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Zona</label>
+        <select id="fldZona">
+          <option value="Inbound">Inbound</option>
+          <option value="Picker">Picker</option>
+          <option value="Packer">Packer</option>
+          <option value="Loading">Loading</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Tanggal Shift Masuk</label>
+        <input type="date" id="fldTanggal">
+      </div>
+      <div class="form-field">
+        <label>Kayu PTI/JPS</label>
+        <input type="number" id="fldKayuPti" min="0" value="0">
+      </div>
+      <div class="form-field">
+        <label>Plastik Grey</label>
+        <input type="number" id="fldPlastikGrey" min="0" value="0">
+      </div>
+      <div class="form-field">
+        <label>Plastik Hitam Tebal</label>
+        <input type="number" id="fldPlastikTebal" min="0" value="0">
+      </div>
+      <div class="form-field">
+        <label>Plastik Hitam One Way</label>
+        <input type="number" id="fldPlastikOneWay" min="0" value="0">
+      </div>
+      <div class="form-field">
+        <label>Kayu Loscam</label>
+        <input type="number" id="fldKayuLoscam" min="0" value="0">
+      </div>
+      <div class="form-field">
+        <label>Dedicated DC</label>
+        <input type="number" id="fldDedicatedDC" min="0" value="0">
+      </div>
+      <div class="form-field">
+        <label>Pallet Tidak Standar</label>
+        <input type="number" id="fldPalletTidakStandar" min="0" value="0">
+      </div>
+      <div class="form-field">
+        <label>Timestamp</label>
+        <input type="text" id="fldTimestamp" placeholder="terisi otomatis">
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn ghost" id="entryModalCancel">Batal</button>
+      <button class="btn accent" id="entryModalSave">Simpan</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== MODAL: PENGATURAN (fallback jika APPS_SCRIPT_URL kosong) ===================== -->
+<div class="modal-overlay" id="settingsModalOverlay">
+  <div class="modal-panel" style="max-width:480px;">
+    <div class="modal-head">
+      <p class="panel-title">Pengaturan Koneksi Simpan Data</p>
+      <button class="modal-close" id="settingsModalClose">&times;</button>
+    </div>
+    <div class="modal-msg info">URL Apps Script sudah ditanam di dalam kode aplikasi ini. Kolom ini hanya cadangan jika suatu saat kamu perlu mengganti URL tanpa mengedit file HTML.</div>
+    <div class="form-field full" style="margin-top:12px;">
+      <label>URL Web App Apps Script</label>
+      <input type="text" id="fldAppsScriptUrl" placeholder="https://script.google.com/macros/s/.../exec">
+    </div>
+    <div class="modal-actions">
+      <button class="btn ghost" id="settingsModalCancel">Batal</button>
+      <button class="btn accent" id="settingsModalSave">Simpan</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ================= CONFIG ================= */
+const SHEET_ID = "1XB6nZCxPxBvNmkF5LdcVKFJHkrRZ22CSuYjL5J7pvGs";
+const GID = "1079930115";
+
+/* =========================================================================
+   URL WEB APP APPS SCRIPT — DITANAM LANGSUNG DI SINI
+   Setelah kamu deploy Code.gs sebagai Web App (lihat komentar di Code.gs),
+   tempel URL yang berakhiran /exec di antara tanda kutip di bawah ini.
+   Contoh: "https://script.google.com/macros/s/AKfycb.../exec"
+   Setelah ini terisi, SEMUA pengguna otomatis bisa Tambah/Edit/Hapus data
+   tanpa perlu membuka menu Pengaturan sama sekali.
+   ========================================================================= */
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz980FaYZ9QvaXoYqgSxd284705Yb3cpwv79cU0_aeaK2ReUcVOlxgxfcJIn66ywn7jrA/exec";
+
+const PALLET_TYPES = [
+  { key:"kayuPti",        label:"Kayu PTI/JPS",          color:"#B9863E" },
+  { key:"plastikGrey",    label:"Plastik Grey",          color:"#1E8A8C" },
+  { key:"plastikTebal",   label:"Plastik Hitam Tebal",   color:"#7C8497" },
+  { key:"plastikOneWay",  label:"Plastik Hitam One Way", color:"#7566C9" },
+  { key:"kayuLoscam",     label:"Kayu Loscam",           color:"#8F6529" },
+  { key:"dedicatedDC",    label:"Dedicated DC",          color:"#4E7FB0" },
+  { key:"palletTidakStandar", label:"Pallet Tidak Standar", color:"#D1516A" },
+];
+
+const GUDANG_META = {
+  "JATAKE 3":    { css:"j3",   label:"Jatake 3" },
+  "JATAKE 6":    { css:"j6",   label:"Jatake 6" },
+  "POLY UNGGUL": { css:"poly", label:"Poly Unggul" },
+  "TELESONIK":   { css:"tele", label:"Telesonik" },
+};
+
+let rawRows = [];      // parsed A:L data
+let trendChartInst = null;
+let donutChartInst = null;
+let chartReady = false;
+let trendPeriod = "harian"; // harian | mingguan | bulanan
+let deferredInstallPrompt = null;
+
+const M1_CACHE_KEY = "ndc_stok_pallet_m1_cache_v1";
+const M3_CACHE_KEY = "ndc_stok_pallet_m3_cache_v1";
+const APPS_SCRIPT_URL_KEY = "ndc_stok_pallet_apps_script_url";
+const APPS_SCRIPT_URL_IS_SET = APPS_SCRIPT_URL && APPS_SCRIPT_URL.indexOf("TEMPEL_URL_WEB_APP_APPS_SCRIPT_DI_SINI") === -1;
+let appsScriptUrl = APPS_SCRIPT_URL_IS_SET ? APPS_SCRIPT_URL : (localStorage.getItem(APPS_SCRIPT_URL_KEY) || "");
+let editingRowNumber = null; // null = mode tambah, angka = mode edit (nomor baris di spreadsheet)
+
+/* dd/mm/yyyy <-> yyyy-mm-dd (untuk <input type=date>) */
+function ddmmyyyyToISO(str){
+  const d = parseTanggal(str);
+  if(!d) return "";
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+}
+function isoToDdmmyyyy(str){
+  if(!str) return "";
+  const [y,m,d] = str.split("-").map(Number);
+  if(!y||!m||!d) return "";
+  return `${String(d).padStart(2,"0")}/${String(m).padStart(2,"0")}/${y}`;
+}
+/* ================= STATUS KOLOM ANGKA (hijau = terisi, merah = masih 0) ================= */
+const IP_NUM_IDS = ["ipKayuPti","ipPlastikGrey","ipPlastikTebal","ipPlastikOneWay","ipKayuLoscam","ipDedicatedDC","ipPalletTidakStandar"];
+const FLD_NUM_IDS = ["fldKayuPti","fldPlastikGrey","fldPlastikTebal","fldPlastikOneWay","fldKayuLoscam","fldDedicatedDC","fldPalletTidakStandar"];
+
+function styleNumberInput(el){
+  if(!el) return;
+  const v = Number(el.value) || 0;
+  el.classList.remove("val-zero-input","val-filled-input");
+  el.classList.add(v > 0 ? "val-filled-input" : "val-zero-input");
+}
+function styleAllNumberFields(ids){
+  ids.forEach(id=>styleNumberInput(document.getElementById(id)));
+}
+function bindNumberFieldStyling(ids){
+  ids.forEach(id=>{
+    const el = document.getElementById(id);
+    if(!el) return;
+    el.addEventListener("input", ()=>styleNumberInput(el));
+  });
+}
+
+function buildAutoTimestamp(){
+  const n = new Date();
+  const pad = v=>String(v).padStart(2,"0");
+  return `${pad(n.getDate())}/${pad(n.getMonth()+1)}/${n.getFullYear()} ${pad(n.getHours())}:${pad(n.getMinutes())}:${pad(n.getSeconds())}`;
+}
+
+/* ================= TOAST NOTIFIKASI ================= */
+function showToast(title, message, type){
+  const stack = document.getElementById("toastStack");
+  if(!stack) return;
+  const kind = type === "error" ? "error" : "success";
+  const el = document.createElement("div");
+  el.className = "toast " + kind;
+  const icon = kind === "error"
+    ? '<svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="#C0293F" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>'
+    : '<svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="#1E8A54" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>';
+  el.innerHTML = `${icon}<div class="toast-body"><div class="toast-title"></div><div class="toast-desc"></div></div><button class="toast-close" aria-label="Tutup" type="button">&times;</button>`;
+  el.querySelector(".toast-title").textContent = title || "";
+  el.querySelector(".toast-desc").textContent = message || "";
+  stack.appendChild(el);
+  const remove = ()=>{
+    el.classList.add("hide");
+    setTimeout(()=>el.remove(), 220);
+  };
+  el.querySelector(".toast-close").addEventListener("click", remove);
+  setTimeout(remove, 4200);
+}
+
+/* ================= TANGGAL HELPERS (dd/mm/yyyy) ================= */
+function parseTanggal(str){
+  if(!str) return null;
+  const parts = str.split("/").map(Number);
+  if(parts.length < 3 || parts.some(isNaN)) return null;
+  const [d,m,y] = parts;
+  return new Date(y, m-1, d);
+}
+function getISOWeekInfo(date){
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const dayNum = (d.getUTCDay() + 6) % 7;
+  d.setUTCDate(d.getUTCDate() - dayNum + 3);
+  const firstThursday = new Date(Date.UTC(d.getUTCFullYear(), 0, 4));
+  const fdDayNum = (firstThursday.getUTCDay() + 6) % 7;
+  firstThursday.setUTCDate(firstThursday.getUTCDate() - fdDayNum + 3);
+  const week = 1 + Math.round((d - firstThursday) / (7*86400000));
+  return { year: d.getUTCFullYear(), week };
+}
+const BULAN_PENDEK = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+function formatTanggalPendek(date){
+  return `${String(date.getDate()).padStart(2,"0")}/${String(date.getMonth()+1).padStart(2,"0")}`;
+}
+
+/* ================= LOAD CHART.JS WITH FALLBACK ================= */
+function loadScript(src){
+  return new Promise((resolve, reject)=>{
+    const s = document.createElement("script");
+    s.src = src;
+    s.onload = resolve;
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+async function ensureChartLib(){
+  if(typeof Chart !== "undefined"){ chartReady = true; return true; }
+  const sources = [
+    "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js",
+    "https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"
+  ];
+  for(const src of sources){
+    try{
+      await loadScript(src);
+      if(typeof Chart !== "undefined"){ chartReady = true; return true; }
+    }catch(e){ /* try next source */ }
+  }
+  chartReady = false;
+  return false;
+}
+
+/* ================= CLOCK ================= */
+function updateClock(){
+  const now = new Date();
+  const hh = String(now.getHours()).padStart(2,"0");
+  const mm = String(now.getMinutes()).padStart(2,"0");
+  const ss = String(now.getSeconds()).padStart(2,"0");
+  document.getElementById("clockTime").textContent = `${hh}:${mm}:${ss}`;
+  const hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"][now.getDay()];
+  const bulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"][now.getMonth()];
+  document.getElementById("clockDate").textContent = `${hari}, ${now.getDate()} ${bulan} ${now.getFullYear()}`;
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+/* ================= TABS ================= */
+document.querySelectorAll(".tab-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("view-"+btn.dataset.tab).classList.add("active");
+  });
+});
+
+document.getElementById("gotoInputPallet").addEventListener("click", ()=>{
+  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+  document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
+  document.getElementById("view-menu4").classList.add("active");
+});
+
+/* ================= GVIZ FETCH HELPERS ================= */
+async function fetchGviz(range){
+  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&gid=${GID}&range=${range}`;
+  const res = await fetch(url);
+  if(!res.ok) throw new Error("Gagal mengambil data spreadsheet (HTTP "+res.status+")");
+  const text = await res.text();
+  const start = text.indexOf("{");
+  const end = text.lastIndexOf("}");
+  const json = JSON.parse(text.substring(start, end+1));
+  if(json.status === "error"){
+    throw new Error(json.errors?.[0]?.detailed_message || "Query gviz error");
+  }
+  return json.table;
+}
+
+function cellText(cell){
+  if(!cell) return "";
+  if(cell.f !== undefined && cell.f !== null) return String(cell.f);
+  if(cell.v !== undefined && cell.v !== null) return String(cell.v);
+  return "";
+}
+function cellNum(cell){
+  if(!cell) return 0;
+  const v = cell.v;
+  if(typeof v === "number") return v;
+  const n = parseFloat(cellText(cell).replace(",",""));
+  return isNaN(n) ? 0 : n;
+}
+
+/* ================= LOAD MENU 1 (A2:L) ================= */
+async function loadMenu1(){
+  document.getElementById("m1LoadArea").style.display = "flex";
+  document.getElementById("m1LoadArea").innerHTML = '<div class="spin"></div>Mengambil data dari spreadsheet...';
+  document.getElementById("m1TableWrap").style.display = "none";
+  try{
+    const table = await fetchGviz("A2:L5000");
+    rawRows = [];
+    (table.rows || []).forEach((r, idx)=>{
+      const c = r.c || [];
+      const timestamp = cellText(c[0]);
+      const gudang = cellText(c[1]).trim().toUpperCase();
+      if(!timestamp && !gudang) return; // skip fully empty row
+      rawRows.push({
+        rowNumber: idx + 2, // baris 2 = data pertama setelah header
+        timestamp,
+        gudang,
+        shift: cellText(c[2]),
+        zona: cellText(c[3]),
+        kayuPti: cellNum(c[4]),
+        plastikGrey: cellNum(c[5]),
+        plastikTebal: cellNum(c[6]),
+        plastikOneWay: cellNum(c[7]),
+        kayuLoscam: cellNum(c[8]),
+        dedicatedDC: cellNum(c[9]),
+        palletTidakStandar: cellNum(c[10]),
+        tanggal: cellText(c[11]).trim(),
+      });
+    });
+    renderMenu1();
+    document.getElementById("m1LoadArea").style.display = "none";
+    document.getElementById("m1TableWrap").style.display = "block";
+    hideOfflineBanner();
+    try{ localStorage.setItem(M1_CACHE_KEY, JSON.stringify({ rows: rawRows, ts: Date.now() })); }catch(e){}
+    updateRefreshStatus();
+
+    // dashboard depends on the same data, but must never break menu 1
+    populateDateFilter();
+    computeDashboard();
+  }catch(err){
+    const cached = readCache(M1_CACHE_KEY);
+    if(cached && cached.rows && cached.rows.length){
+      rawRows = cached.rows;
+      renderMenu1();
+      document.getElementById("m1LoadArea").style.display = "none";
+      document.getElementById("m1TableWrap").style.display = "block";
+      showOfflineBanner(cached.ts);
+      populateDateFilter();
+      computeDashboard();
+    }else{
+      showError("m1LoadArea", err);
+    }
+    throw err;
+  }
+}
+
+/* ================= OFFLINE CACHE HELPERS ================= */
+function readCache(key){
+  try{
+    const raw = localStorage.getItem(key);
+    if(!raw) return null;
+    return JSON.parse(raw);
+  }catch(e){ return null; }
+}
+function showOfflineBanner(ts){
+  const el = document.getElementById("offlineBanner");
+  const txt = document.getElementById("offlineBannerText");
+  const d = ts ? new Date(ts) : null;
+  const waktu = d ? `${d.toLocaleDateString("id-ID")} ${d.toLocaleTimeString("id-ID")}` : "tidak diketahui";
+  txt.textContent = `Sedang menampilkan data offline (cache terakhir: ${waktu}). Muat ulang saat tersambung internet.`;
+  el.style.display = "flex";
+}
+function hideOfflineBanner(){
+  document.getElementById("offlineBanner").style.display = "none";
+}
+
+function tagClassFor(gudang){
+  const meta = GUDANG_META[gudang];
+  return meta ? meta.css : "s";
+}
+
+function renderMenu1(filterText){
+  const body = document.getElementById("m1Body");
+  const q = (filterText || "").trim().toLowerCase();
+  let rows = rawRows;
+  if(q){
+    rows = rawRows.filter(r =>
+      (r.gudang+" "+r.shift+" "+r.zona+" "+r.tanggal).toLowerCase().includes(q)
+    );
+  }
+  const vc = n => n === 0 ? "val-zero" : "val-pos";
+  body.innerHTML = rows.map(r=>`
+    <tr>
+      <td>${r.timestamp || "-"}</td>
+      <td><span class="tag ${tagClassFor(r.gudang)}">${r.gudang || "-"}</span></td>
+      <td><span class="tag s">${r.shift || "-"}</span></td>
+      <td>${r.zona || "-"}</td>
+      <td class="${vc(r.kayuPti)}">${r.kayuPti}</td>
+      <td class="${vc(r.plastikGrey)}">${r.plastikGrey}</td>
+      <td class="${vc(r.plastikTebal)}">${r.plastikTebal}</td>
+      <td class="${vc(r.plastikOneWay)}">${r.plastikOneWay}</td>
+      <td class="${vc(r.kayuLoscam)}">${r.kayuLoscam}</td>
+      <td class="${vc(r.dedicatedDC)}">${r.dedicatedDC}</td>
+      <td class="${vc(r.palletTidakStandar)}">${r.palletTidakStandar}</td>
+      <td>${r.tanggal || "-"}</td>
+      <td class="aksi-cell"><button class="mini-btn" data-row="${r.rowNumber}" onclick="openEditEntry(${r.rowNumber})">Edit</button><button class="mini-btn danger" data-row="${r.rowNumber}" onclick="deleteEntry(${r.rowNumber}, this)">Hapus</button></td>
+    </tr>
+  `).join("");
+  document.getElementById("m1Count").textContent = `${rows.length} baris`;
+}
+
+document.getElementById("m1Search").addEventListener("input", e=>renderMenu1(e.target.value));
+document.getElementById("m1Refresh").addEventListener("click", async ()=>{
+  const btn = document.getElementById("m1Refresh");
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="btn-spin dark"></span>Memuat...';
+  try{
+    await loadMenu1();
+    await loadMenu3();
+  }catch(e){ /* pesan error sudah ditampilkan di area masing-masing */ }
+  btn.disabled = false;
+  btn.textContent = original;
+});
+
+/* ================= MENU 2 : DASHBOARD ================= */
+function populateDateFilter(){
+  const sel = document.getElementById("fDate");
+  const cur = sel.value;
+  const dates = Array.from(new Set(rawRows.map(r=>r.tanggal).filter(Boolean)));
+  dates.sort((a,b)=>{
+    const [da,ma,ya] = a.split("/").map(Number);
+    const [db,mb,yb] = b.split("/").map(Number);
+    return new Date(ya,ma-1,da) - new Date(yb,mb-1,db);
+  });
+  sel.innerHTML = '<option value="">Semua tanggal</option>' +
+    dates.map(d=>`<option value="${d}">${d}</option>`).join("");
+  if(dates.includes(cur)) sel.value = cur;
+}
+
+function getFilteredRows(){
+  const fDate = document.getElementById("fDate").value;
+  const fGudang = document.getElementById("fGudang").value;
+  const fShift = document.getElementById("fShift").value;
+  return rawRows.filter(r=>{
+    if(fDate && r.tanggal !== fDate) return false;
+    if(fGudang && r.gudang !== fGudang) return false;
+    if(fShift && r.shift !== fShift) return false;
+    return true;
+  });
+}
+
+function sumType(rows, key){
+  return rows.reduce((s,r)=>s + (r[key]||0), 0);
+}
+function totalPallet(rows){
+  return PALLET_TYPES.reduce((s,t)=>s+sumType(rows,t.key), 0);
+}
+
+async function computeDashboard(){
+  if(rawRows.length === 0) return;
+  document.getElementById("m2LoadArea").style.display = "none";
+  document.getElementById("m2Content").style.display = "block";
+
+  await ensureChartLib().catch(()=>{});
+
+  const rows = getFilteredRows();
+  const total = totalPallet(rows);
+
+  document.getElementById("heroTotal").innerHTML = `${total.toLocaleString("id-ID")} <small>pallet</small>`;
+  document.getElementById("m2EntriHint").textContent = `${rows.length} entri`;
+
+  // ---- trend (harian / mingguan / bulanan) ----
+  const trendMap = {}; // key -> { total, sortKey }
+  rows.forEach(r=>{
+    if(!r.tanggal) return;
+    const d = parseTanggal(r.tanggal);
+    if(!d) return;
+    const rowTotal = PALLET_TYPES.reduce((s,t)=>s+(r[t.key]||0),0);
+    let key, sortKey;
+    if(trendPeriod === "harian"){
+      key = r.tanggal;
+      sortKey = d.getTime();
+    }else if(trendPeriod === "mingguan"){
+      const info = getISOWeekInfo(d);
+      key = `Mgg ${info.week} '${String(info.year).slice(2)}`;
+      sortKey = info.year*100 + info.week;
+    }else{
+      key = `${BULAN_PENDEK[d.getMonth()]} ${d.getFullYear()}`;
+      sortKey = d.getFullYear()*100 + d.getMonth();
+    }
+    if(!trendMap[key]) trendMap[key] = { total:0, sortKey };
+    trendMap[key].total += rowTotal;
+  });
+  const trendDates = Object.keys(trendMap).sort((a,b)=>trendMap[a].sortKey - trendMap[b].sortKey);
+  const trendVals = trendDates.map(d=>trendMap[d].total);
+
+  // ---- donut totals (needed either way) ----
+  const typeSums = PALLET_TYPES.map(t=>sumType(rows,t.key));
+
+  if(chartReady && typeof Chart !== "undefined"){
+    document.getElementById("trendWrap").innerHTML = '<canvas id="trendChart"></canvas>';
+    document.getElementById("donutWrap").innerHTML = '<canvas id="donutChart"></canvas>';
+
+    const trendCtx = document.getElementById("trendChart");
+    if(trendChartInst) trendChartInst.destroy();
+    trendChartInst = new Chart(trendCtx, {
+      type:"line",
+      data:{
+        labels: trendDates,
+        datasets:[{
+          data: trendVals,
+          borderColor:"#1E8A8C",
+          backgroundColor:"rgba(30,138,140,0.12)",
+          fill:true,
+          tension:.35,
+          pointRadius:0,
+          borderWidth:2,
+        }]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false}, tooltip:{mode:"index",intersect:false}},
+        scales:{
+          x:{ticks:{color:"#A4ABB8",font:{size:10}}, grid:{display:false}},
+          y:{display:false}
+        }
+      }
+    });
+
+    const donutCtx = document.getElementById("donutChart");
+    if(donutChartInst) donutChartInst.destroy();
+    donutChartInst = new Chart(donutCtx, {
+      type:"doughnut",
+      data:{
+        labels: PALLET_TYPES.map(t=>t.label),
+        datasets:[{
+          data: typeSums,
+          backgroundColor: PALLET_TYPES.map(t=>t.color),
+          borderWidth:0,
+          hoverOffset:4,
+        }]
+      },
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        cutout:"68%",
+        plugins:{legend:{display:false}}
+      }
+    });
+  }else{
+    document.getElementById("trendWrap").innerHTML = '<div class="chart-fallback">Grafik tidak dapat dimuat &mdash; jaringan memblokir library chart. Data angka tetap akurat di bawah.</div>';
+    document.getElementById("donutWrap").innerHTML = '<div class="chart-fallback">Grafik tidak tersedia</div>';
+  }
+
+  const legendWrap = document.getElementById("donutLegend");
+  legendWrap.innerHTML = PALLET_TYPES.map((t,i)=>`
+    <div class="legend-row">
+      <span class="sw" style="background:${t.color}"></span>
+      <span>${t.label}</span>
+      <span class="val">${typeSums[i].toLocaleString("id-ID")}</span>
+    </div>
+  `).join("");
+
+  // ---- gudang cards (respect date+shift filter, not gudang filter) ----
+  const fDate = document.getElementById("fDate").value;
+  const fShift = document.getElementById("fShift").value;
+  const dsRows = rawRows.filter(r=>{
+    if(fDate && r.tanggal !== fDate) return false;
+    if(fShift && r.shift !== fShift) return false;
+    return true;
+  });
+  const cardsWrap = document.getElementById("gudangCards");
+  cardsWrap.innerHTML = Object.keys(GUDANG_META).map(g=>{
+    const meta = GUDANG_META[g];
+    const gRows = dsRows.filter(r=>r.gudang === g);
+    const gTotal = totalPallet(gRows);
+    return `
+      <div class="gcard ${meta.css}">
+        <div class="gname">${meta.label}</div>
+        <div class="gtotal">${gTotal.toLocaleString("id-ID")}</div>
+        <div class="gsub">${gRows.length} entri tercatat</div>
+      </div>
+    `;
+  }).join("");
+
+  // ---- breakdown table ----
+  const maxVal = Math.max(1, ...typeSums);
+  const body = document.getElementById("breakdownBody");
+  body.innerHTML = PALLET_TYPES.map((t,i)=>{
+    const pct = total ? Math.round((typeSums[i]/total)*100) : 0;
+    return `
+      <tr>
+        <td class="type"><span class="sw" style="background:${t.color}"></span>${t.label}</td>
+        <td class="bar-cell">
+          <div class="bar-track"><div class="bar-fill" style="width:${(typeSums[i]/maxVal*100)}%;background:${t.color}"></div></div>
+        </td>
+        <td class="num">${typeSums[i].toLocaleString("id-ID")} <span class="hint">(${pct}%)</span></td>
+      </tr>
+    `;
+  }).join("");
+
+  renderShiftComparison();
+}
+
+/* ================= PERBANDINGAN SHIFT (JAM SIBUK) ================= */
+const SHIFT_COLORS = { "Shift 1":"#1E8A8C", "Shift 2":"#B9863E", "Shift 3":"#7566C9" };
+function renderShiftComparison(){
+  const sel = document.getElementById("shiftCompareGudang");
+  if(!sel) return;
+  const gudang = sel.value;
+  const fDate = document.getElementById("fDate").value;
+
+  const rows = rawRows.filter(r=>{
+    if(r.gudang !== gudang) return false;
+    if(fDate && r.tanggal !== fDate) return false;
+    return true;
+  });
+
+  const shifts = ["Shift 1","Shift 2","Shift 3"];
+  const data = shifts.map(s=>{
+    const sRows = rows.filter(r=>r.shift === s);
+    return { shift:s, total: totalPallet(sRows), entri: sRows.length };
+  });
+
+  const body = document.getElementById("shiftCompareBody");
+  if(!body) return;
+
+  if(rows.length === 0){
+    body.innerHTML = '<div class="shift-compare-empty">Belum ada data untuk gudang &amp; tanggal ini.</div>';
+    return;
+  }
+
+  const maxVal = Math.max(1, ...data.map(d=>d.total));
+  const peak = data.reduce((a,b)=> b.total > a.total ? b : a, data[0]);
+
+  body.innerHTML = data.map(d=>`
+    <div class="shift-bar-row">
+      <div class="shift-bar-label"><span class="sw" style="background:${SHIFT_COLORS[d.shift]}"></span>${d.shift}</div>
+      <div class="shift-bar-track">
+        <div class="shift-bar-fill" style="width:${(d.total/maxVal*100)}%;background:${SHIFT_COLORS[d.shift]}"></div>
+      </div>
+      <div class="shift-bar-val">${d.total.toLocaleString("id-ID")} <small>(${d.entri} entri)</small></div>
+    </div>
+  `).join("") + (peak.total > 0
+    ? `<div class="shift-peak-note">Volume tertinggi tercatat pada <b>${peak.shift}</b> &mdash; jadikan acuan pola jam sibuk gudang ini.</div>`
+    : "");
+}
+document.getElementById("shiftCompareGudang").addEventListener("change", renderShiftComparison);
+
+document.getElementById("periodToggle").addEventListener("click", e=>{
+  const btn = e.target.closest("button[data-period]");
+  if(!btn) return;
+  trendPeriod = btn.dataset.period;
+  document.querySelectorAll("#periodToggle button").forEach(b=>b.classList.toggle("active", b===btn));
+  computeDashboard();
+});
+
+["fDate","fGudang","fShift"].forEach(id=>{
+  document.getElementById(id).addEventListener("change", computeDashboard);
+});
+document.getElementById("m2Reset").addEventListener("click", ()=>{
+  document.getElementById("fDate").value = "";
+  document.getElementById("fGudang").value = "";
+  document.getElementById("fShift").value = "";
+  computeDashboard();
+});
+
+/* ================= MENU 3 : RAW O-Y ================= */
+async function loadMenu3(){
+  document.getElementById("m3LoadArea").style.display = "flex";
+  document.getElementById("m3LoadArea").innerHTML = '<div class="spin"></div>Mengambil ringkasan O&ndash;Y...';
+  document.getElementById("oyGrid").style.display = "none";
+  try{
+    const table = await fetchGviz("O1:Y40");
+    const rows = (table.rows || []).map(r => (r.c||[]).map(c=>cellText(c)));
+
+    const blocks = [
+      { css:"j3",   cols:[0,1] },
+      { css:"j6",   cols:[3,4] },
+      { css:"poly", cols:[6,7] },
+      { css:"tele", cols:[9,10] },
+    ];
+
+    const grid = document.getElementById("oyGrid");
+    grid.innerHTML = blocks.map(b=>{
+      let headHtml = "";
+      let bodyHtml = "";
+      let inHeader = true;
+      rows.forEach(r=>{
+        const label = (r[b.cols[0]] || "").trim();
+        const value = (r[b.cols[1]] || "").trim();
+        if(!label && !value) return;
+        if(inHeader && GUDANG_META[label.toUpperCase()]){
+          headHtml = `<div class="oy-head ${b.css}"><span>${label}</span><span>${value}</span></div>`;
+          inHeader = false;
+          return;
+        }
+        if(/^Shift\s*\d/i.test(label)){
+          const m = label.match(/Shift\s*(\d)/i);
+          const shiftClass = m ? "shift-"+m[1] : "shift-x";
+          bodyHtml += `<div class="oy-shift-label ${shiftClass}">${label}</div>`;
+          return;
+        }
+        if(label){
+          bodyHtml += `<div class="oy-row"><span class="l">${label}</span><span class="v">${value || "0"}</span></div>`;
+        }
+      });
+      return `<div class="oy-block">${headHtml || '<div class="oy-head '+b.css+'">-</div>'}<div class="oy-body">${bodyHtml}</div></div>`;
+    }).join("");
+
+    document.getElementById("m3LoadArea").style.display = "none";
+    grid.style.display = "grid";
+    try{ localStorage.setItem(M3_CACHE_KEY, JSON.stringify({ html: grid.innerHTML, ts: Date.now() })); }catch(e){}
+  }catch(err){
+    const cached = readCache(M3_CACHE_KEY);
+    if(cached && cached.html){
+      const grid = document.getElementById("oyGrid");
+      grid.innerHTML = cached.html;
+      document.getElementById("m3LoadArea").style.display = "none";
+      grid.style.display = "grid";
+    }else{
+      showError("m3LoadArea", err);
+    }
+    throw err;
+  }
+}
+document.getElementById("m3Refresh").addEventListener("click", async ()=>{
+  const btn = document.getElementById("m3Refresh");
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="btn-spin dark"></span>Memuat...';
+  try{ await loadMenu3(); }catch(e){ /* pesan error sudah ditampilkan */ }
+  btn.disabled = false;
+  btn.textContent = original;
+});
+
+/* ================= EXPORT CSV (Data Log) ================= */
+function csvEscape(v){
+  const s = String(v ?? "");
+  if(/[",\n;]/.test(s)) return '"' + s.replace(/"/g,'""') + '"';
+  return s;
+}
+function exportCSV(){
+  const q = (document.getElementById("m1Search").value || "").trim().toLowerCase();
+  let rows = rawRows;
+  if(q){
+    rows = rawRows.filter(r =>
+      (r.gudang+" "+r.shift+" "+r.zona+" "+r.tanggal).toLowerCase().includes(q)
+    );
+  }
+  if(rows.length === 0){ alert("Tidak ada data untuk diexport."); return; }
+
+  const headers = ["Timestamp","Gudang","Shift","Zona","Kayu PTI/JPS","Plastik Grey",
+    "Plastik Hitam Tebal","Plastik Hitam One Way","Kayu Loscam","Dedicated DC",
+    "Pallet Tidak Standar","Tanggal Shift Masuk"];
+
+  const lines = [headers.map(csvEscape).join(";")];
+  rows.slice().reverse().forEach(r=>{
+    lines.push([
+      r.timestamp, r.gudang, r.shift, r.zona, r.kayuPti, r.plastikGrey,
+      r.plastikTebal, r.plastikOneWay, r.kayuLoscam, r.dedicatedDC,
+      r.palletTidakStandar, r.tanggal
+    ].map(csvEscape).join(";"));
+  });
+
+  const csvContent = "\uFEFF" + lines.join("\r\n"); // BOM so Excel reads UTF-8 correctly
+  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  const now = new Date();
+  const stamp = `${now.getFullYear()}${String(now.getMonth()+1).padStart(2,"0")}${String(now.getDate()).padStart(2,"0")}-${String(now.getHours()).padStart(2,"0")}${String(now.getMinutes()).padStart(2,"0")}`;
+  a.href = url;
+  a.download = `data-log-stock-pallet-ndc-${stamp}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+document.getElementById("m1Export").addEventListener("click", ()=>{
+  const btn = document.getElementById("m1Export");
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="btn-spin"></span>Menyiapkan...';
+  setTimeout(()=>{
+    try{ exportCSV(); }
+    finally{ btn.disabled = false; btn.textContent = original; }
+  }, 60);
+});
+
+/* ================= CETAK RINGKAS ================= */
+function printRingkas(){
+  const rows = getFilteredRows();
+  const total = totalPallet(rows);
+  const typeSums = PALLET_TYPES.map(t=>sumType(rows,t.key));
+  const fDate = document.getElementById("fDate").value || "Semua tanggal";
+  const fGudang = document.getElementById("fGudang").value || "Semua gudang";
+  const fShift = document.getElementById("fShift").value || "Semua shift";
+  const now = new Date();
+
+  const cardsHtml = Object.keys(GUDANG_META).map(g=>{
+    const meta = GUDANG_META[g];
+    const gRows = rawRows.filter(r=>{
+      if(document.getElementById("fDate").value && r.tanggal !== document.getElementById("fDate").value) return false;
+      if(document.getElementById("fShift").value && r.shift !== document.getElementById("fShift").value) return false;
+      return r.gudang === g;
+    });
+    return `<div class="p-card">${meta.label}<b>${totalPallet(gRows).toLocaleString("id-ID")}</b></div>`;
+  }).join("");
+
+  const rowsHtml = PALLET_TYPES.map((t,i)=>`
+    <tr><td>${t.label}</td><td style="text-align:right">${typeSums[i].toLocaleString("id-ID")}</td></tr>
+  `).join("");
+
+  document.getElementById("printArea").innerHTML = `
+    <h2>Ringkasan Stock Pallet Kosong &mdash; NDC Jatake</h2>
+    <div class="p-meta">Tanggal: ${fDate} &middot; Gudang: ${fGudang} &middot; Shift: ${fShift} &middot; ${rows.length} entri</div>
+    <div class="p-total">${total.toLocaleString("id-ID")} pallet</div>
+    <div class="p-cards">${cardsHtml}</div>
+    <table><thead><tr><th>Jenis Pallet</th><th style="text-align:right">Jumlah</th></tr></thead><tbody>${rowsHtml}</tbody></table>
+    <div class="p-foot">Dicetak ${now.toLocaleDateString("id-ID")} ${now.toLocaleTimeString("id-ID")} &middot; Stock Pallet Kosong NDC</div>
+  `;
+  window.print();
+}
+document.getElementById("m2Print").addEventListener("click", ()=>{
+  const btn = document.getElementById("m2Print");
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="btn-spin"></span>Menyiapkan...';
+  setTimeout(()=>{
+    try{ printRingkas(); }
+    finally{ btn.disabled = false; btn.textContent = original; }
+  }, 60);
+});
+
+/* ================= KIRIM DATA KE APPS SCRIPT (dipakai add/edit/delete) ================= */
+async function postToAppsScript(payload){
+  if(!appsScriptUrl){
+    return { status:"error", message:"URL Apps Script belum diatur." };
+  }
+  const res = await fetch(appsScriptUrl, {
+    method: "POST",
+    headers: { "Content-Type": "text/plain;charset=utf-8" }, // hindari CORS preflight
+    body: JSON.stringify(payload),
+  });
+  return await res.json();
+}
+
+/* ================= MODAL: TAMBAH / EDIT ENTRI ================= */
+function showEntryMsg(text, type){
+  const el = document.getElementById("entryModalMsg");
+  el.className = "modal-msg " + (type || "info");
+  el.textContent = text;
+  el.style.display = "block";
+}
+function hideEntryMsg(){
+  document.getElementById("entryModalMsg").style.display = "none";
+}
+function openEntryModal(){
+  document.getElementById("entryModalOverlay").classList.add("open");
+}
+function closeEntryModal(){
+  document.getElementById("entryModalOverlay").classList.remove("open");
+  hideEntryMsg();
+}
+function resetEntryForm(){
+  document.getElementById("fldGudang").value = "JATAKE 3";
+  document.getElementById("fldShift").value = "Shift 1";
+  document.getElementById("fldZona").value = "Inbound";
+  document.getElementById("fldTanggal").value = "";
+  document.getElementById("fldKayuPti").value = 0;
+  document.getElementById("fldPlastikGrey").value = 0;
+  document.getElementById("fldPlastikTebal").value = 0;
+  document.getElementById("fldPlastikOneWay").value = 0;
+  document.getElementById("fldKayuLoscam").value = 0;
+  document.getElementById("fldDedicatedDC").value = 0;
+  document.getElementById("fldPalletTidakStandar").value = 0;
+  document.getElementById("fldTimestamp").value = "";
+  styleAllNumberFields(FLD_NUM_IDS);
+}
+
+window.openEditEntry = function(rowNumber){
+  if(!appsScriptUrl){
+    openSettingsModal();
+    showSettingsMsg("Atur dulu URL Web App Apps Script sebelum mengedit entri.", "err");
+    return;
+  }
+  const r = rawRows.find(x=>x.rowNumber === rowNumber);
+  if(!r) return;
+  const editLabel = `${r.gudang} - ${r.shift} - ${r.tanggal}`;
+  if(!confirm(`Edit entri ini?\n${editLabel}\n\nKamu akan membuka form untuk mengubah data pada baris ini.`)) return;
+  editingRowNumber = rowNumber;
+  document.getElementById("entryModalTitle").textContent = "Edit Entri";
+  document.getElementById("fldGudang").value = r.gudang;
+  document.getElementById("fldShift").value = r.shift;
+  const fldZonaSel = document.getElementById("fldZona");
+  const zonaOptionExists = Array.from(fldZonaSel.options).some(o=>o.value === r.zona);
+  if(r.zona && !zonaOptionExists){
+    const opt = document.createElement("option");
+    opt.value = r.zona;
+    opt.textContent = r.zona + " (lama)";
+    fldZonaSel.appendChild(opt);
+  }
+  fldZonaSel.value = r.zona || "Inbound";
+  document.getElementById("fldTanggal").value = ddmmyyyyToISO(r.tanggal);
+  document.getElementById("fldKayuPti").value = r.kayuPti;
+  document.getElementById("fldPlastikGrey").value = r.plastikGrey;
+  document.getElementById("fldPlastikTebal").value = r.plastikTebal;
+  document.getElementById("fldPlastikOneWay").value = r.plastikOneWay;
+  document.getElementById("fldKayuLoscam").value = r.kayuLoscam;
+  document.getElementById("fldDedicatedDC").value = r.dedicatedDC;
+  document.getElementById("fldPalletTidakStandar").value = r.palletTidakStandar;
+  document.getElementById("fldTimestamp").value = r.timestamp;
+  styleAllNumberFields(FLD_NUM_IDS);
+  hideEntryMsg();
+  openEntryModal();
+};
+
+document.getElementById("entryModalClose").addEventListener("click", closeEntryModal);
+document.getElementById("entryModalCancel").addEventListener("click", closeEntryModal);
+document.getElementById("entryModalOverlay").addEventListener("click", e=>{
+  if(e.target.id === "entryModalOverlay") closeEntryModal();
+});
+
+document.getElementById("entryModalSave").addEventListener("click", async ()=>{
+  const tanggalIso = document.getElementById("fldTanggal").value;
+  if(!tanggalIso){ showEntryMsg("Tanggal Shift Masuk wajib diisi.", "err"); return; }
+
+  const isEditMode = !!editingRowNumber;
+  const payload = {
+    mode: isEditMode ? "edit" : "add",
+    rowNumber: editingRowNumber || null,
+    timestamp: document.getElementById("fldTimestamp").value.trim() || buildAutoTimestamp(),
+    gudang: document.getElementById("fldGudang").value,
+    shift: document.getElementById("fldShift").value,
+    zona: document.getElementById("fldZona").value.trim(),
+    kayuPti: Number(document.getElementById("fldKayuPti").value) || 0,
+    plastikGrey: Number(document.getElementById("fldPlastikGrey").value) || 0,
+    plastikTebal: Number(document.getElementById("fldPlastikTebal").value) || 0,
+    plastikOneWay: Number(document.getElementById("fldPlastikOneWay").value) || 0,
+    kayuLoscam: Number(document.getElementById("fldKayuLoscam").value) || 0,
+    dedicatedDC: Number(document.getElementById("fldDedicatedDC").value) || 0,
+    palletTidakStandar: Number(document.getElementById("fldPalletTidakStandar").value) || 0,
+    tanggal: isoToDdmmyyyy(tanggalIso),
+  };
+
+  const saveBtn = document.getElementById("entryModalSave");
+  saveBtn.disabled = true;
+  saveBtn.innerHTML = '<span class="btn-spin"></span>Menyimpan...';
+  hideEntryMsg();
+
+  try{
+    const json = await postToAppsScript(payload);
+    if(json && json.status === "ok"){
+      showEntryMsg("Tersimpan. Memuat ulang data...", "ok");
+      showToast(
+        isEditMode ? "Berhasil mengubah data" : "Berhasil menambah data",
+        `${payload.gudang} · ${payload.shift} · ${payload.zona} · ${payload.tanggal}`,
+        "success"
+      );
+      await loadMenu1();
+      setTimeout(closeEntryModal, 500);
+    }else{
+      const msg = json && json.message ? json.message : "respons tidak dikenali.";
+      showEntryMsg("Gagal menyimpan: " + msg, "err");
+      showToast(isEditMode ? "Gagal mengubah data" : "Gagal menambah data", msg, "error");
+    }
+  }catch(err){
+    showEntryMsg("Gagal terhubung ke Apps Script: " + err.message + ". Cek URL di Pengaturan dan koneksi internet.", "err");
+    showToast("Gagal terhubung", err.message, "error");
+  }finally{
+    saveBtn.disabled = false;
+    saveBtn.textContent = "Simpan";
+  }
+});
+
+/* ================= MENU 4 : INPUT PALLET (halaman tambah data) ================= */
+function showIpMsg(text, type){
+  const el = document.getElementById("ipMsg");
+  el.className = "modal-msg " + (type || "info");
+  el.textContent = text;
+  el.style.display = "block";
+}
+function hideIpMsg(){
+  document.getElementById("ipMsg").style.display = "none";
+}
+function resetIpForm(){
+  document.getElementById("ipGudang").value = "JATAKE 3";
+  document.getElementById("ipShift").value = "Shift 1";
+  document.getElementById("ipZona").value = "Inbound";
+  document.getElementById("ipTanggal").value = "";
+  document.getElementById("ipKayuPti").value = 0;
+  document.getElementById("ipPlastikGrey").value = 0;
+  document.getElementById("ipPlastikTebal").value = 0;
+  document.getElementById("ipPlastikOneWay").value = 0;
+  document.getElementById("ipKayuLoscam").value = 0;
+  document.getElementById("ipDedicatedDC").value = 0;
+  document.getElementById("ipPalletTidakStandar").value = 0;
+  styleAllNumberFields(IP_NUM_IDS);
+}
+document.getElementById("ipReset").addEventListener("click", ()=>{ resetIpForm(); hideIpMsg(); });
+
+document.getElementById("ipSave").addEventListener("click", async ()=>{
+  if(!appsScriptUrl){
+    showIpMsg("URL Apps Script belum diatur. Tempel URL Web App di dalam konstanta APPS_SCRIPT_URL pada kode HTML, atau buka tab Data Log > tombol Pengaturan.", "err");
+    return;
+  }
+  const tanggalIso = document.getElementById("ipTanggal").value;
+  if(!tanggalIso){ showIpMsg("Tanggal Shift Masuk wajib diisi.", "err"); return; }
+
+  const payload = {
+    mode: "add",
+    timestamp: buildAutoTimestamp(),
+    gudang: document.getElementById("ipGudang").value,
+    shift: document.getElementById("ipShift").value,
+    zona: document.getElementById("ipZona").value.trim(),
+    kayuPti: Number(document.getElementById("ipKayuPti").value) || 0,
+    plastikGrey: Number(document.getElementById("ipPlastikGrey").value) || 0,
+    plastikTebal: Number(document.getElementById("ipPlastikTebal").value) || 0,
+    plastikOneWay: Number(document.getElementById("ipPlastikOneWay").value) || 0,
+    kayuLoscam: Number(document.getElementById("ipKayuLoscam").value) || 0,
+    dedicatedDC: Number(document.getElementById("ipDedicatedDC").value) || 0,
+    palletTidakStandar: Number(document.getElementById("ipPalletTidakStandar").value) || 0,
+    tanggal: isoToDdmmyyyy(tanggalIso),
+  };
+
+  const btn = document.getElementById("ipSave");
+  btn.disabled = true;
+  btn.innerHTML = '<span class="btn-spin"></span>Menyimpan...';
+  hideIpMsg();
+
+  try{
+    const json = await postToAppsScript(payload);
+    if(json && json.status === "ok"){
+      showIpMsg("Tersimpan ke spreadsheet. Data langsung terbaca di Data Log, Dasbor, dan Ringkasan.", "ok");
+      showToast("Berhasil menambah data", `${payload.gudang} · ${payload.shift} · ${payload.zona} · ${payload.tanggal}`, "success");
+      resetIpForm();
+      await loadMenu1();
+    }else{
+      const msg = json && json.message ? json.message : "respons tidak dikenali.";
+      showIpMsg("Gagal menyimpan: " + msg, "err");
+      showToast("Gagal menambah data", msg, "error");
+    }
+  }catch(err){
+    showIpMsg("Gagal terhubung ke Apps Script: " + err.message + ". Cek URL dan koneksi internet.", "err");
+    showToast("Gagal terhubung", err.message, "error");
+  }finally{
+    btn.disabled = false;
+    btn.textContent = "Simpan Data";
+  }
+});
+
+/* ================= HAPUS ENTRI ================= */
+window.deleteEntry = async function(rowNumber, btnEl){
+  if(!appsScriptUrl){
+    openSettingsModal();
+    showSettingsMsg("Atur dulu URL Web App Apps Script sebelum menghapus entri.", "err");
+    return;
+  }
+  const r = rawRows.find(x=>x.rowNumber === rowNumber);
+  if(!r) return;
+  const label = `${r.gudang} - ${r.shift} - ${r.tanggal}`;
+  if(!confirm(`Hapus entri ini secara permanen?\n${label}\n\nTindakan ini tidak bisa dibatalkan.`)) return;
+
+  const originalText = btnEl ? btnEl.textContent : "";
+  if(btnEl){
+    btnEl.disabled = true;
+    btnEl.innerHTML = '<span class="btn-spin dark"></span>Menghapus...';
+  }
+
+  try{
+    const json = await postToAppsScript({ mode:"delete", rowNumber });
+    if(json && json.status === "ok"){
+      showToast("Berhasil menghapus data", label, "success");
+      await loadMenu1();
+    }else{
+      const msg = json && json.message ? json.message : "respons tidak dikenali.";
+      showToast("Gagal menghapus data", msg, "error");
+      alert("Gagal menghapus: " + msg);
+      if(btnEl){ btnEl.disabled = false; btnEl.textContent = originalText; }
+    }
+  }catch(err){
+    showToast("Gagal terhubung", err.message, "error");
+    alert("Gagal terhubung ke Apps Script: " + err.message);
+    if(btnEl){ btnEl.disabled = false; btnEl.textContent = originalText; }
+  }
+};
+
+/* ================= MODAL: PENGATURAN (URL Apps Script, cadangan) ================= */
+function showSettingsMsg(text, type){
+  const el = document.querySelector("#settingsModalOverlay .modal-msg");
+  el.className = "modal-msg " + (type || "info");
+  el.textContent = text;
+}
+function openSettingsModal(){
+  document.getElementById("fldAppsScriptUrl").value = appsScriptUrl;
+  document.getElementById("settingsModalOverlay").classList.add("open");
+}
+function closeSettingsModal(){
+  document.getElementById("settingsModalOverlay").classList.remove("open");
+}
+document.getElementById("settingsModalClose").addEventListener("click", closeSettingsModal);
+document.getElementById("settingsModalCancel").addEventListener("click", closeSettingsModal);
+document.getElementById("settingsModalOverlay").addEventListener("click", e=>{
+  if(e.target.id === "settingsModalOverlay") closeSettingsModal();
+});
+document.getElementById("settingsModalSave").addEventListener("click", ()=>{
+  const url = document.getElementById("fldAppsScriptUrl").value.trim();
+  appsScriptUrl = url;
+  localStorage.setItem(APPS_SCRIPT_URL_KEY, url);
+  showSettingsMsg("URL disimpan.", "ok");
+  setTimeout(closeSettingsModal, 500);
+});
+
+/* ================= ERROR ================= */
+function showError(areaId, err){
+  document.getElementById(areaId).innerHTML =
+    `<div class="error-box">Gagal memuat data: ${err.message || err}. Pastikan spreadsheet dapat diakses publik ("Anyone with the link can view"), lalu klik "Muat ulang".</div>`;
+}
+
+/* ================= TEMA ================= */
+document.getElementById("themeSelect").addEventListener("change", e=>{
+  document.documentElement.setAttribute("data-theme", e.target.value);
+});
+document.documentElement.setAttribute("data-theme", "kertas-hangat");
+
+/* ================= AUTO REFRESH + TOMBOL REFRESH MANUAL ================= */
+const AUTO_REFRESH_INTERVAL_MS = 60000; // refresh otomatis setiap 60 detik
+let autoRefreshTimer = null;
+let lastRefreshTs = null;
+
+function isAnyModalOpen(){
+  const entryOpen = document.getElementById("entryModalOverlay").classList.contains("open");
+  const settingsOpen = document.getElementById("settingsModalOverlay").classList.contains("open");
+  return entryOpen || settingsOpen;
+}
+
+function updateRefreshStatus(){
+  lastRefreshTs = new Date();
+  const el = document.getElementById("refreshStatus");
+  if(!el) return;
+  const hh = String(lastRefreshTs.getHours()).padStart(2,"0");
+  const mm = String(lastRefreshTs.getMinutes()).padStart(2,"0");
+  el.textContent = `Terakhir diperbarui ${hh}:${mm}`;
+}
+
+async function autoRefreshTick(){
+  if(document.visibilityState !== "visible") return; // hemat kuota saat tab tidak aktif
+  if(isAnyModalOpen()) return; // jangan ganggu saat sedang input/edit
+  if(document.activeElement && document.activeElement.id === "m1Search") return; // jangan ganggu saat sedang mencari
+  try{
+    await loadMenu1();
+    await loadMenu3();
+  }catch(e){ /* offline: biarkan tampilan cache yang sudah ada */ }
+}
+
+function startAutoRefresh(){
+  if(autoRefreshTimer) clearInterval(autoRefreshTimer);
+  autoRefreshTimer = setInterval(autoRefreshTick, AUTO_REFRESH_INTERVAL_MS);
+}
+
+document.addEventListener("visibilitychange", ()=>{
+  if(document.visibilityState === "visible") autoRefreshTick();
+});
+window.addEventListener("online", ()=>{ hideOfflineBanner(); autoRefreshTick(); });
+
+document.getElementById("manualRefreshBtn").addEventListener("click", async ()=>{
+  const btn = document.getElementById("manualRefreshBtn");
+  const icon = document.getElementById("manualRefreshIcon");
+  btn.disabled = true;
+  icon.classList.add("icon-spin");
+  try{
+    await loadMenu1();
+    await loadMenu3();
+    showToast("Data diperbarui", "Data Log, Dasbor, dan Ringkasan sudah dimuat ulang.", "success");
+  }catch(err){
+    showToast("Gagal memperbarui data", err.message || String(err), "error");
+  }finally{
+    btn.disabled = false;
+    icon.classList.remove("icon-spin");
+  }
+});
+
+/* ================= PWA: MANIFEST + SERVICE WORKER (single-file, offline-first) ================= */
+const LOGO_URL = "https://res.cloudinary.com/vf5nikiz/image/upload/v1785164146/IMG_20260707_085722_slsyiz.jpg";
+
+const SW_SOURCE = `
+const CACHE_NAME = "ndc-stock-pallet-v1";
+const SHELL_KEY = "app-shell";
+
+self.addEventListener("install", (event)=>{ self.skipWaiting(); });
+self.addEventListener("activate", (event)=>{ event.waitUntil(self.clients.claim()); });
+
+self.addEventListener("fetch", (event)=>{
+  const req = event.request;
+  if(req.method !== "GET") return;
+
+  // App shell (the page itself): network-first, fall back to last cached copy when offline.
+  if(req.mode === "navigate" || req.destination === "document"){
+    event.respondWith(
+      fetch(req).then(res=>{
+        const clone = res.clone();
+        caches.open(CACHE_NAME).then(cache=>cache.put(SHELL_KEY, clone));
+        return res;
+      }).catch(()=> caches.match(SHELL_KEY))
+    );
+    return;
+  }
+
+  // Other GET requests (fonts, logo, data): network-first, cache as we go, fall back offline.
+  event.respondWith(
+    fetch(req).then(res=>{
+      const clone = res.clone();
+      caches.open(CACHE_NAME).then(cache=>cache.put(req, clone));
+      return res;
+    }).catch(()=> caches.match(req))
+  );
+});
+`;
+
+async function setupPWA(){
+  try{
+    const manifest = {
+      name: "Stock Pallet Kosong NDC",
+      short_name: "Stock Pallet NDC",
+      description: "Pemantauan stock pallet kosong NDC Jatake per gudang & shift",
+      start_url: ".",
+      scope: ".",
+      display: "standalone",
+      background_color: "#FAF9F6",
+      theme_color: "#1E8A8C",
+      icons: [
+        { src: LOGO_URL, sizes: "192x192", type: "image/jpeg", purpose: "any" },
+        { src: LOGO_URL, sizes: "512x512", type: "image/jpeg", purpose: "any" }
+      ]
+    };
+    const manifestBlob = new Blob([JSON.stringify(manifest)], { type: "application/manifest+json" });
+    document.getElementById("manifestLink").setAttribute("href", URL.createObjectURL(manifestBlob));
+
+    if("serviceWorker" in navigator){
+      const swBlob = new Blob([SW_SOURCE], { type: "application/javascript" });
+      const swUrl = URL.createObjectURL(swBlob);
+      navigator.serviceWorker.register(swUrl).catch(()=>{ /* offline caching optional, never block app */ });
+    }
+  }catch(e){ /* PWA setup is best-effort */ }
+}
+
+window.addEventListener("beforeinstallprompt", (e)=>{
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  const btn = document.getElementById("installBtn");
+  btn.style.display = "inline-flex";
+});
+document.getElementById("installBtn").addEventListener("click", async ()=>{
+  if(!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt = null;
+  document.getElementById("installBtn").style.display = "none";
+});
+window.addEventListener("online", ()=>{ hideOfflineBanner(); loadMenu1(); loadMenu3(); });
+
+/* ================= INIT ================= */
+bindNumberFieldStyling(IP_NUM_IDS);
+bindNumberFieldStyling(FLD_NUM_IDS);
+styleAllNumberFields(IP_NUM_IDS);
+styleAllNumberFields(FLD_NUM_IDS);
+loadMenu1();
+loadMenu3();
+ensureChartLib();
+setupPWA();
+startAutoRefresh();
+</script>
+</body>
+</html>
